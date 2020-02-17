@@ -31,6 +31,7 @@ yarn dev
   - NodeJs
   - Express
   - Nodemon
+  - Mongoose
 
 
 ## Author
