@@ -1,10 +1,11 @@
 const Dev = require('../models/Dev');
 const axios = require('axios');
+const parseStringToArray = require('../utils/parseStringsAsArray');
 
 module.exports = {
   async store(req, res) {
     const { github_username, techs, latitude, longitude } = req.body;
-    const techsArray = techs.split(',').map(tech => tech.trim());
+    const techsArray = parseStringToArray(techs)
 
     let dev = await Dev.findOne({ github_username });
 
