@@ -12,7 +12,7 @@
 > Aplicacao Desenvolvida na Semana Omnistack da Rocketseat
 
 ### Descrição
-Este projeto é o backend de uma aplicacao onde possui a finalidade de mostrar desenvolvedores próximos e tecnologias que dominam.
+Este projeto é o backend de uma aplicacao onde possui a finalidade de mostrar desenvolvedores próximos filtrando pelas tecnologias que dominam.
 
 ## Install
 
@@ -32,6 +32,37 @@ yarn dev
   - Express
   - Nodemon
   - Mongoose
+
+### Rotas
+#### POST <code>/devs</code> 
+Responsavel por cadastrar novos devs no banco de dados.
+
+Body - Json:
+```json
+{
+	"github_username":"marcelxsilva",
+	"techs": "ReactJ, ReactNative",
+	"latitude": -23.6202648,
+	"longitude":-46.8155989
+}
+```
+
+#### GET <code>/devs</code> 
+Exibe todos os Devs cadastrados no banco.
+
+
+#### GET <code>/search</code> 
+
+Busca os Devs proximos baseado na geolocalizacao e tecnologias.
+
+Params:
+
+longitude: number
+
+latitude: number
+
+techs: react, react native
+
 
 
 ## Author
